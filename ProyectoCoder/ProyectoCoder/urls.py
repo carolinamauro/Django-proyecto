@@ -1,10 +1,16 @@
 from django.contrib import admin
-from django.urls import path
-from AppCoder.views import curso,mi_plantilla
+from django.urls import path,include
+#from AppCoder.views import curso,inicio,profesores,estudiantes,entregables
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('curso/',curso),
-    path('mi_plantilla/',mi_plantilla)
+    path('appCoder/',include('AppCoder.urls')),
+    
 ]
+
+
+
+
+
+
 
